@@ -37,6 +37,7 @@ create_gitignore() {
 sapphire-run() {
     init_git
     add_remote_origin
+    create_gitignore
     git add .
     git checkout -b $branch || git checkout $branch
     git commit -m "$message"
