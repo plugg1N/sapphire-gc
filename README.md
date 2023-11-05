@@ -12,7 +12,6 @@ their repositories!
 Made by: Zhamkov Nikita Dmitrievich
 Country, city: Russia, Saint-Petersburg
 
-___
 ## Installation
 
 1. Clone this repository, using:
@@ -26,8 +25,6 @@ git clone https://github.com/plugg1N/sapphire-gc.git
 cd sapphire-gc && ./install.sh
 ```
 Installation script will add main script to your system's binaries
-
-___
 
 ## How to use?
 1. Initiate a Git repository in a directory with your project
@@ -53,8 +50,6 @@ branch=main
 ```bash
 sapphire
 ```
-
-___
 
 ## How to contribute?
 
