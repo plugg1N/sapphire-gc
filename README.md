@@ -1,7 +1,7 @@
 # Sapphire ✨
 
 
-![](https://github.com/plugg1N/sapphire-gc/refs/show.gif)
+![my-gif](https://github.com/plugg1N/sapphire-gc/blob/main/refs/show.gif)
 
 
 ## Your favourite commit tool for GitHub
