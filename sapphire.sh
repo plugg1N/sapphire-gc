@@ -11,7 +11,6 @@
 # 1. Initialize a Git repository in a folder
 # 2. Create a file called "sapphire.cfg"
 # 3. Fill a file with needed info:
-#     - link=(link to github repo)
 #     - message=(commit message)
 #     - branch=(branch to push to)
 # 4. Run command "sapphire" to push refs
@@ -28,10 +27,7 @@ fi
 
 while IFS='=' read -r key value
 do
-    if [ "$key" == "link" ]; then
-	link="$value"
-	
-    elif [ "$key" == "message" ]; then
+    if [ "$key" == "message" ]; then
 	message="${value}"
 
     elif [ "$key" == "branch" ]; then
@@ -73,7 +69,6 @@ create_gitignore() {
 # Run the script
 sapphire-run() {
     init_git
-    add_remote_origin
     create_gitignore
     git add .
     git checkout -b $branch || git checkout $branch

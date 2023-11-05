@@ -18,4 +18,4 @@ fi
 
 sudo chmod +x "$TARGET_BIN_PATH"
 
-echo -e "\nThe script was successfully installed!\nRun Sapphire using 'sapphire' in Git folder!"
+echo -e "The script was successfully installed!\nRun Sapphire using 'sapphire' in Git folder!\n\nCreated by: plugg1N (@github)"
