@@ -1,7 +1,5 @@
 # Sapphire ✨
 
-___
-
 
 ## Your favourite commit tool for GitHub
 
