@@ -16,6 +16,7 @@
 # 4. Run command "sapphire" to push refs
 
 sapphire_file="sapphire.cfg"
+DEFAULT_CONFIG_CONTENT="message=sapphire auto commit ✨\nbranch=main"
 
 
 # Check of sapphire cfg is in the git directory
@@ -50,6 +51,22 @@ init_git() {
     fi
 }
 
+
+
+create_default_cfg() {
+    echo -e "$DEFAULT_CONFIG_CONTENT" > sapphire.cfg
+    echo "Default sapphire.cfg file created successfully!"
+}
+
+
+# Check for command line args
+if [ "$1" == "-cc"  ] || [ "$1" == "--create-cfg" ]; then
+    create_default_cfg
+    exit 0
+fi
+
+
+
 # Add origin
 add_remote_origin() {
     git remote add origin $link
@@ -76,5 +93,7 @@ sapphire-run() {
     git push -u origin $branch
 }
 
-sapphire-run
-echo -e "\nThank you for using Sapphire!\nEverything was pushed successfully!\nMade by: plugg1N (GitHub)"
+if [ $# -eq 0 ]; then
+    sapphire-run
+    echo -e "\nThank you for using Sapphire!\nEverything was pushed successfully!\nMade by: plugg1N (GitHub)"
+fi
