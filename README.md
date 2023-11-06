@@ -40,8 +40,14 @@ git init
 git remote add origin https://github.com/OWNER/REPOSITORY.git
 ```
 
-3. In a Git repository file, create a `sapphire.cfg` file and fill it
-with your custom info:
+3. In a Git repository file, create a `sapphire.cfg` file using **NEW** function:
+
+```bash
+sapphire -cc OR sapphire --create-cfg
+```
+This function will create a working copy of`sapphire.cfg` automatically at your directory, that is ready for usage
+
+Or create `sapphire.cfg` manually
 
 *Example of `sapphire.cfg` file:*
 ```txt
