@@ -28,20 +28,23 @@ check_for_cfg() {
 }
 
 
-while IFS='=' read -r key value
-do
-    if [ "$key" == "message" ]; then
-	message="${value}"
+init_vars() {
+    while IFS='=' read -r key value
+    do
+        if [ "$key" == "message" ]; then
+        message="${value}"
 
-    elif [ "$key" == "branch" ]; then
-	branch="$value"
+        elif [ "$key" == "branch" ]; then
+        branch="$value"
 
-    fi
-done < "$sapphire_file"
+        fi
+    done < "$sapphire_file"
+
+    message=${message:-"sapphire auto commit"}
+    branch=${branch:-"main"}
+}
 
 
-message=${message:-"sapphire auto commit"}
-branch=${branch:-"main"}
 
 
 
@@ -86,6 +89,7 @@ create_gitignore() {
 
 # Run the script
 sapphire-run() {
+    init_vars
     init_git
     create_gitignore
     check_for_cfg
