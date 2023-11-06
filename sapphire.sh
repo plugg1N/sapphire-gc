@@ -19,11 +19,13 @@ sapphire_file="sapphire.cfg"
 DEFAULT_CONFIG_CONTENT="message=sapphire auto commit ✨\nbranch=main"
 
 
-# Check of sapphire cfg is in the git directory
-if [ ! -f "$sapphire_file" ]; then
-    echo "The 'sapphire.cfg' file does not exist in directory."
-    exit 1
-fi
+check_for_cfg() {
+    # Check of sapphire cfg is in the git directory
+    if [ ! -f "$sapphire_file" ]; then
+        echo -e "The 'sapphire.cfg' file does not exist in directory. Create it using:\nsapphire -cc\nOr configure it manually"
+        exit 1
+    fi
+}
 
 
 while IFS='=' read -r key value
@@ -86,6 +88,7 @@ create_gitignore() {
 sapphire-run() {
     init_git
     create_gitignore
+    check_for_cfg
     git add .
     git checkout -b $branch || git checkout $branch
     git commit -m "$message"
