@@ -1,6 +1,9 @@
 # Sapphire ✨
 
 
+![my-gif](https://github.com/plugg1N/sapphire-gc/blob/main/refs/show.gif)
+
+
 ## Your favourite commit tool for GitHub
 
 ![https://github.com/plugg1N](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
