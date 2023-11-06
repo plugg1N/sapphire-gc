@@ -43,6 +43,21 @@ branch=${branch:-"main"}
 
 
 
+
+create_default_cfg() {
+    echo -e "$DEFAULT_CONFIG_CONTENT" > sapphire.cfg
+    echo "Default sapphire.cfg file created successfully!"
+}
+
+if [ "$1" == "-cc" ] || [ "$1" == "--create-cfg" ]; then
+    create_default_cfg
+    exit 0
+fi
+
+
+
+
+
 # Check if git is initialized
 init_git() {
     if [ ! -d ".git" ]; then
@@ -50,22 +65,6 @@ init_git() {
 	exit 1
     fi
 }
-
-
-
-create_default_cfg() {
-    echo -e "$DEFAULT_CONFIG_CONTENT" > sapphire.cfg
-    echo "Default sapphire.cfg file created successfully!"
-}
-
-
-# Check for command line args
-if [ "$1" == "-cc"  ] || [ "$1" == "--create-cfg" ]; then
-    create_default_cfg
-    exit 0
-fi
-
-
 
 # Add origin
 add_remote_origin() {

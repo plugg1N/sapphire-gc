@@ -9,7 +9,7 @@ if [ ! -f "$SOURCE_SCRIPT_PATH" ]; then
 
 fi
 
-sudo mv "$SOURCE_SCRIPT_PATH" "$TARGET_BIN_PATH"
+sudo cp "$SOURCE_SCRIPT_PATH" "$TARGET_BIN_PATH"
 
 if [ ! -f "$TARGET_BIN_PATH" ]; then
     echo "Failed to move script to $TARGET_BIN_PATH"
