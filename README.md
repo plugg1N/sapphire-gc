@@ -12,6 +12,12 @@
 Sapphire is a fast and concise tool for developers to commit changes and push refs to
 their repositories!
 
+**Be Careful!** This tool was *not* created in order to be a replacement for a standart GIT workflow. Use this tool *wisely* for projects that were created for 
+recreational reasons or if the project is not that massive.
+
+> I will not try to overcomplicate my project, if it doesn't fit one's needs for their massive enterprise-level repository!
+> Those projects **should be** handled manually without any tools
+
 Made by: Zhamkov Nikita Dmitrievich
 Country, city: Russia, Saint-Petersburg
 
